@@ -5,26 +5,16 @@ import { Eyebrow } from "@/components/ui-kit";
 import { FinalCta } from "@/components/FinalCta";
 import { Reveal } from "@/components/Reveal";
 import { aboutStory, brand } from "@/data/site";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/sobre-mi")({
-  head: () => ({
-    meta: [
-      { title: "Sobre mí — Alex Yaguana | AYACX Photography" },
-      {
-        name: "description",
-        content:
-          "Alex Yaguana, fotógrafo y creador de contenido en Quito. Dirección cercana, estética elegante y mirada cinematográfica.",
-      },
-      {
-        property: "og:title",
-        content: "Sobre mí — Alex Yaguana | AYACX Photography",
-      },
-      {
-        property: "og:description",
-        content: "Fotografía cercana, dirección clara y una mirada personal.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Anthony Yaguana, fotógrafo en Quito | AYACX Photography",
+      description:
+        "Conoce a Anthony Yaguana, fotógrafo y creador de contenido en Quito con dirección cercana y estética cinematográfica.",
+      path: "/sobre-mi",
+    }),
   component: SobreMi,
 });
 
@@ -47,8 +37,8 @@ function SobreMi() {
               Fotografía cercana, dirección clara y una mirada personal.
             </h1>
             <p className="lead mt-10 max-w-xl">
-              Hola, soy Alex Yaguana, fotógrafo y creador de contenido en Quito,
-              Ecuador.
+              Hola, soy Anthony Yaguana, fotógrafo y creador de contenido en
+              Quito, Ecuador.
             </p>
             <p className="lead mt-5 max-w-xl">
               Me especializo en eventos, retratos, fotografía para marcas y
@@ -64,7 +54,10 @@ function SobreMi() {
               {brand.years} · {brand.location}
             </p>
           </div>
-          <ImagePlaceholder label="Retrato real de Alex Yaguana" ratio="4:5" />
+          <ImagePlaceholder
+            label="Retrato real de Anthony Yaguana"
+            ratio="4:5"
+          />
         </div>
       </section>
 
@@ -106,7 +99,7 @@ function SobreMi() {
             “{brand.philosophy}”
           </blockquote>
           <p className="eyebrow mt-10 opacity-55">
-            Alex Yaguana — AYACX Photography
+            Anthony Yaguana — AYACX Photography
           </p>
         </div>
       </section>
@@ -121,8 +114,11 @@ function SobreMi() {
           </h2>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { label: "Alex fotografiando un evento", ratio: "4:5" as const },
-              { label: "Alex dirigiendo una sesión", ratio: "4:5" as const },
+              {
+                label: "Anthony fotografiando un evento",
+                ratio: "4:5" as const,
+              },
+              { label: "Anthony dirigiendo una sesión", ratio: "4:5" as const },
               { label: "Preparación de iluminación", ratio: "4:5" as const },
               { label: "Fotografía detrás de cámaras", ratio: "4:5" as const },
             ].map((item, i) => (

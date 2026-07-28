@@ -13,20 +13,16 @@ import { SiteLayout } from "@/components/SiteLayout";
 import { Btn, BtnAnchor, Eyebrow } from "@/components/ui-kit";
 import { contact } from "@/data/site";
 import { cn } from "@/lib/utils";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/contacto")({
-  head: () => ({
-    meta: [
-      { title: "Contacto — AYACX Photography" },
-      {
-        name: "description",
-        content:
-          "Escríbeme por WhatsApp o el formulario para consultar disponibilidad de eventos, retratos y proyectos de marca en Quito.",
-      },
-      { property: "og:title", content: "Contacto — AYACX Photography" },
-      { property: "og:description", content: "Cuéntame qué tienes en mente." },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Contacto y disponibilidad | AYACX Photography",
+      description:
+        "Consulta disponibilidad para retratos, eventos, fotografía para marcas y contenido visual en Quito.",
+      path: "/contacto",
+    }),
   component: Contacto,
 });
 
@@ -78,6 +74,26 @@ function validate(v: Values) {
 const field =
   "mt-2 w-full min-h-11 border border-input bg-paper px-4 py-3 text-base outline-none transition-colors focus:border-ink";
 
+function buildWhatsAppUrl(v: Values) {
+  const lines = [
+    "Hola, Anthony. Encontré AYACX Photography y quisiera consultar disponibilidad.",
+    "",
+    `Nombre: ${v.nombre.trim()}`,
+    `Servicio: ${v.servicio}`,
+    `Fecha aproximada: ${v.fecha}`,
+    `Ubicación: ${v.ciudad.trim()}`,
+    `WhatsApp: ${v.whatsapp.trim()}`,
+    `Correo: ${v.email.trim()}`,
+    v.presupuesto.trim()
+      ? `Presupuesto aproximado: ${v.presupuesto.trim()}`
+      : null,
+    "",
+    `Mensaje: ${v.mensaje.trim()}`,
+  ].filter(Boolean);
+
+  return `https://wa.me/593939666272?text=${encodeURIComponent(lines.join("\n"))}`;
+}
+
 function Contacto() {
   const [values, setValues] = useState<Values>(initial);
   const [errors, setErrors] = useState<Partial<Record<keyof Values, string>>>(
@@ -106,7 +122,8 @@ function Contacto() {
       return;
     }
     setStatus("loading");
-    window.setTimeout(() => setStatus("success"), 900);
+    window.open(buildWhatsAppUrl(values), "_blank", "noopener,noreferrer");
+    setStatus("success");
   };
 
   return (
@@ -216,9 +233,9 @@ function Contacto() {
               >
                 <CheckCircle2 className="h-6 w-6" aria-hidden="true" />
                 <p className="lead text-foreground">
-                  Tu solicitud fue preparada correctamente. En esta versión,
-                  también puedes escribir directamente por WhatsApp para
-                  confirmar disponibilidad.
+                  Tu solicitud fue preparada correctamente y se abrió WhatsApp
+                  con los datos ingresados. Si no se abrió una nueva pestaña,
+                  puedes enviarla desde el botón directo de WhatsApp.
                 </p>
                 <Btn
                   variant="outline"

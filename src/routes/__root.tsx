@@ -11,6 +11,15 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import {
+  OG_IMAGE,
+  SITE_AUTHOR,
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_TITLE,
+  THEME_COLOR,
+  structuredData,
+} from "../lib/seo";
 
 function NotFoundComponent() {
   return (
@@ -84,16 +93,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       meta: [
         { charSet: "utf-8" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { title: "AYACX Photography — Fotografía en Quito" },
-        {
-          name: "description",
-          content:
-            "Fotografía auténtica de eventos, retratos y marcas en Quito, Ecuador, por Alex Yaguana.",
-        },
-        { name: "author", content: "Alex Yaguana" },
-        { property: "og:site_name", content: "AYACX Photography" },
+        { name: "theme-color", content: THEME_COLOR },
+        { name: "referrer", content: "strict-origin-when-cross-origin" },
+        { title: SITE_TITLE },
+        { name: "description", content: SITE_DESCRIPTION },
+        { name: "author", content: SITE_AUTHOR },
+        { name: "robots", content: "index, follow" },
+        { property: "og:site_name", content: SITE_NAME },
         { property: "og:type", content: "website" },
+        { property: "og:locale", content: "es_EC" },
+        { property: "og:image", content: OG_IMAGE },
         { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:image", content: OG_IMAGE },
       ],
       links: [
         { rel: "stylesheet", href: appCss },
@@ -121,6 +132,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           type: "image/png",
         },
         { rel: "apple-touch-icon", href: "/icons/apple-touch-icon.png" },
+        { rel: "manifest", href: "/manifest.webmanifest" },
       ],
     }),
     shellComponent: RootShell,
@@ -135,6 +147,10 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="es">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
       </head>
       <body>
         {children}

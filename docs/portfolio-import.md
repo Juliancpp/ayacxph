@@ -3,14 +3,14 @@
 Comando principal:
 
 ```bash
-npm run import:portfolio
+RETRATOS_SRC="/ruta/a/retratos" EVENTOS_SRC="/ruta/a/eventos" MARCAS_SRC="/ruta/a/marcas" npm run import:portfolio
 ```
 
-Fuentes locales por defecto:
+Fuentes locales requeridas:
 
-- Retratos: `/home/julian/Descargas/Retratos`
-- Eventos: `/home/julian/Descargas/Eventos`
-- Fotografía para marcas: `/home/julian/Descargas/Fotos-20260728T032021Z-1-001/Fotos`
+- Retratos: `RETRATOS_SRC`
+- Eventos: `EVENTOS_SRC`
+- Fotografía para marcas: `MARCAS_SRC`
 
 Salidas generadas:
 

@@ -10,30 +10,15 @@ import { FinalCta } from "@/components/FinalCta";
 import { Reveal } from "@/components/Reveal";
 import { brand, contact, services } from "@/data/site";
 import { visiblePortfolioCategories } from "@/data/portfolio";
+import { pageHead, SITE_DESCRIPTION, SITE_TITLE } from "@/lib/seo";
 
 export const Route = createFileRoute("/")({
-  head: () => ({
-    meta: [
-      {
-        title:
-          "AYACX Photography — Fotografía de eventos, retratos y marcas en Quito",
-      },
-      {
-        name: "description",
-        content:
-          "Alex Yaguana, fotógrafo en Quito. Fotografía auténtica para eventos, personas y marcas que quieren contar algo real.",
-      },
-      {
-        property: "og:title",
-        content: "AYACX Photography — Fotografía en Quito",
-      },
-      {
-        property: "og:description",
-        content:
-          "Fotografía auténtica para eventos, personas y marcas. Por Alex Yaguana.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: SITE_TITLE,
+      description: SITE_DESCRIPTION,
+      path: "/",
+    }),
   component: Home,
 });
 
@@ -170,14 +155,14 @@ function Home() {
         </div>
       </section>
 
-      {/* SOBRE ALEX */}
+      {/* SOBRE ANTHONY */}
       <section className="section-y bg-mist">
         <div className="shell grid gap-12 lg:grid-cols-2 lg:gap-20">
           <div>
             <Eyebrow accent="sand" className="text-muted-foreground">
               Sobre mí
             </Eyebrow>
-            <h2 className="display-2 mt-5">Hola, soy Alex Yaguana.</h2>
+            <h2 className="display-2 mt-5">Hola, soy Anthony Yaguana.</h2>
             <p className="lead mt-8 max-w-lg">
               Soy fotógrafo y creador de contenido en Quito, Ecuador. Me
               especializo en eventos, retratos, fotografía para marcas y
@@ -200,14 +185,14 @@ function Home() {
           <div className="aspect-square overflow-hidden border border-ink/8 bg-paper">
             <div className="grid h-full grid-cols-2 grid-rows-2 gap-px bg-ink/10">
               <ImagePlaceholder
-                label="Retrato real de Alex Yaguana"
+                label="Retrato real de Anthony Yaguana"
                 ratio="1:1"
                 tone="paper"
                 compact
                 className="h-full border-0"
               />
               <ImagePlaceholder
-                label="Alex trabajando durante una sesión"
+                label="Anthony trabajando durante una sesión"
                 ratio="1:1"
                 tone="sage"
                 compact
@@ -232,7 +217,7 @@ function Home() {
             “{brand.philosophy}”
           </blockquote>
           <p className="eyebrow mt-12 opacity-55">
-            Alex Yaguana — AYACX Photography
+            Anthony Yaguana — AYACX Photography
           </p>
         </div>
       </section>

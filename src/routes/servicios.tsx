@@ -15,24 +15,16 @@ import {
 } from "@/data/service-plans";
 import { contact } from "@/data/site";
 import { cn } from "@/lib/utils";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/servicios")({
-  head: () => ({
-    meta: [
-      { title: "Servicios — AYACX Photography" },
-      {
-        name: "description",
-        content:
-          "Sesiones fotográficas desde $80 y cobertura de eventos desde $150 por AYACX Photography en Quito, Ecuador.",
-      },
-      { property: "og:title", content: "Servicios — AYACX Photography" },
-      {
-        property: "og:description",
-        content:
-          "Planes claros para sesiones fotográficas, cobertura de eventos y proyectos visuales para marcas.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Servicios y precios de fotografía | AYACX Photography",
+      description:
+        "Planes claros para sesiones fotográficas, cobertura de eventos y proyectos visuales para marcas en Quito.",
+      path: "/servicios",
+    }),
   component: Servicios,
 });
 

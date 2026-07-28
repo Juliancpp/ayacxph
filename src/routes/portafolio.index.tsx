@@ -4,24 +4,16 @@ import { Eyebrow } from "@/components/ui-kit";
 import { PortfolioCategoryMosaic } from "@/components/PortfolioCategoryMosaic";
 import { FinalCta } from "@/components/FinalCta";
 import { visiblePortfolioCategories } from "@/data/portfolio";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/portafolio/")({
-  head: () => ({
-    meta: [
-      { title: "Portafolio — AYACX Photography" },
-      {
-        name: "description",
-        content:
-          "Explora retratos, eventos, fotografía para marcas y contenido para redes por Alex Yaguana.",
-      },
-      { property: "og:title", content: "Portafolio — AYACX Photography" },
-      {
-        property: "og:description",
-        content:
-          "Retratos, eventos y contenido visual para personas y marcas que quieren contar algo real.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Portafolio fotográfico | AYACX Photography",
+      description:
+        "Explora retratos, eventos, fotografía para marcas y contenido para redes por especialidad fotográfica.",
+      path: "/portafolio",
+    }),
   component: Portafolio,
 });
 

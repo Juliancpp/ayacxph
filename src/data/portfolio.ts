@@ -65,7 +65,7 @@ export type PortfolioCategory = {
 
 const whatsappFor = (service: string) =>
   `https://wa.me/593939666272?text=${encodeURIComponent(
-    `Hola, Alex. Encontré AYACX Photography y me gustaría consultar disponibilidad para ${service}.`,
+    `Hola, Anthony. Encontré AYACX Photography y me gustaría consultar disponibilidad para ${service}.`,
   )}`;
 
 const image = (

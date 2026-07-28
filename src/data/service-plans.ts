@@ -35,7 +35,7 @@ export const sessionPlans: ServicePlan[] = [
     features: ["8 fotografías editadas.", "1 locación."],
     ctaLabel: "Consultar mini sesión",
     contactMessage:
-      "Hola, Alex. Me interesa la Mini sesión de $80 y quisiera consultar disponibilidad.",
+      "Hola, Anthony. Me interesa la Mini sesión de $80 y quisiera consultar disponibilidad.",
     order: 1,
     isVisible: true,
   },
@@ -54,7 +54,7 @@ export const sessionPlans: ServicePlan[] = [
     ],
     ctaLabel: "Consultar sesión estándar",
     contactMessage:
-      "Hola, Alex. Me interesa la Sesión estándar de $120 y quisiera consultar disponibilidad.",
+      "Hola, Anthony. Me interesa la Sesión estándar de $120 y quisiera consultar disponibilidad.",
     order: 2,
     isVisible: true,
   },
@@ -73,7 +73,7 @@ export const sessionPlans: ServicePlan[] = [
     ],
     ctaLabel: "Consultar sesión premium",
     contactMessage:
-      "Hola, Alex. Me interesa la Sesión premium de $180 y quisiera consultar disponibilidad.",
+      "Hola, Anthony. Me interesa la Sesión premium de $180 y quisiera consultar disponibilidad.",
     order: 3,
     isVisible: true,
   },
@@ -91,7 +91,7 @@ export const eventCoveragePlans: ServicePlan[] = [
     features: [],
     ctaLabel: "Consultar cobertura de 2 horas",
     contactMessage:
-      "Hola, Alex. Me interesa la cobertura de eventos de 2 horas por $150 y quisiera consultar disponibilidad.",
+      "Hola, Anthony. Me interesa la cobertura de eventos de 2 horas por $150 y quisiera consultar disponibilidad.",
     order: 1,
     isVisible: true,
   },
@@ -106,7 +106,7 @@ export const eventCoveragePlans: ServicePlan[] = [
     features: [],
     ctaLabel: "Consultar cobertura de 4 horas",
     contactMessage:
-      "Hola, Alex. Me interesa la cobertura de eventos de 4 horas por $250 y quisiera consultar disponibilidad.",
+      "Hola, Anthony. Me interesa la cobertura de eventos de 4 horas por $250 y quisiera consultar disponibilidad.",
     order: 2,
     isVisible: true,
   },
@@ -121,7 +121,7 @@ export const eventCoveragePlans: ServicePlan[] = [
     features: [],
     ctaLabel: "Consultar cobertura de 6 horas",
     contactMessage:
-      "Hola, Alex. Me interesa la cobertura de eventos de 6 horas por $350 y quisiera consultar disponibilidad.",
+      "Hola, Anthony. Me interesa la cobertura de eventos de 6 horas por $350 y quisiera consultar disponibilidad.",
     order: 3,
     isVisible: true,
   },
@@ -142,7 +142,7 @@ export const brandAndContentServices: UntariffedService[] = [
       "Producciones visuales para productos, espacios, equipos y negocios que buscan comunicar su identidad con mayor claridad.",
     ctaLabel: "Solicitar una cotización para marca",
     contactMessage:
-      "Hola, Alex. Me interesa solicitar una cotización para fotografía de marca.",
+      "Hola, Anthony. Me interesa solicitar una cotización para fotografía de marca.",
   },
   {
     id: "contenido",
@@ -151,9 +151,9 @@ export const brandAndContentServices: UntariffedService[] = [
       "Fotografías y piezas visuales pensadas para creadores, profesionales, emprendimientos y marcas personales.",
     ctaLabel: "Solicitar una cotización de contenido",
     contactMessage:
-      "Hola, Alex. Me interesa solicitar una cotización para contenido visual para redes.",
+      "Hola, Anthony. Me interesa solicitar una cotización para contenido visual para redes.",
   },
 ];
 
 export const servicesGeneralMessage =
-  "Hola, Alex. Encontré AYACX Photography y quisiera recibir información sobre sus servicios.";
+  "Hola, Anthony. Encontré AYACX Photography y quisiera recibir información sobre sus servicios.";

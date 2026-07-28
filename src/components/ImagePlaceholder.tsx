@@ -55,8 +55,22 @@ export function ImagePlaceholder({
         viewBox="0 0 100 100"
         preserveAspectRatio="none"
       >
-        <line x1="0" y1="0" x2="100" y2="100" stroke="currentColor" strokeWidth="0.25" />
-        <line x1="100" y1="0" x2="0" y2="100" stroke="currentColor" strokeWidth="0.25" />
+        <line
+          x1="0"
+          y1="0"
+          x2="100"
+          y2="100"
+          stroke="currentColor"
+          strokeWidth="0.25"
+        />
+        <line
+          x1="100"
+          y1="0"
+          x2="0"
+          y2="100"
+          stroke="currentColor"
+          strokeWidth="0.25"
+        />
       </svg>
       <svg
         aria-hidden="true"
@@ -64,9 +78,20 @@ export function ImagePlaceholder({
         viewBox="0 0 64 44"
         fill="none"
       >
-        <rect x="0.5" y="0.5" width="63" height="43" stroke="currentColor" strokeWidth="1" />
+        <rect
+          x="0.5"
+          y="0.5"
+          width="63"
+          height="43"
+          stroke="currentColor"
+          strokeWidth="1"
+        />
         <circle cx="17" cy="14" r="5" stroke="currentColor" strokeWidth="1" />
-        <path d="M2 40 22 22l12 11 10-8 18 15" stroke="currentColor" strokeWidth="1" />
+        <path
+          d="M2 40 22 22l12 11 10-8 18 15"
+          stroke="currentColor"
+          strokeWidth="1"
+        />
       </svg>
       <div
         className={cn(
@@ -75,7 +100,9 @@ export function ImagePlaceholder({
         )}
       >
         <span className="ui-label leading-snug">{label}</span>
-        <span className="eyebrow opacity-70">Proporción recomendada: {ratio}</span>
+        <span className="eyebrow opacity-70">
+          Proporción recomendada: {ratio}
+        </span>
       </div>
     </div>
   );

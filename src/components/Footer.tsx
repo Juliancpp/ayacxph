@@ -90,7 +90,7 @@ export function Footer() {
 
       <div className="shell flex flex-col gap-3 border-t border-paper/12 py-8 text-xs opacity-60 sm:flex-row sm:items-center sm:justify-between">
         <p>© 2026 AYACX Photography.</p>
-        <p>Fotografía por Alex Yaguana.</p>
+        <p>Fotografía por Anthony Yaguana.</p>
         <p>Política de privacidad — pendiente</p>
       </div>
     </footer>

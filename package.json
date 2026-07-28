@@ -3,11 +3,14 @@
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "engines": {
+    "node": "22.x"
+  },
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "vite build && node scripts/prepare-github-pages.mjs",
     "build:dev": "vite build --mode development",
-    "preview": "vite preview",
+    "preview": "node scripts/preview-static.mjs",
     "import:portfolio": "node scripts/import-portfolio-images.mjs",
     "lint": "eslint .",
     "format": "prettier --write ."

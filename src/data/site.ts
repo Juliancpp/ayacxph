@@ -2,7 +2,7 @@ export const brand = {
   name: "AYACX",
   descriptor: "Photography",
   full: "AYACX Photography",
-  photographer: "Alex Yaguana",
+  photographer: "Anthony Yaguana",
   location: "Quito, Ecuador",
   years: "6 años de experiencia",
   value:
@@ -12,7 +12,7 @@ export const brand = {
 };
 
 export const whatsappMessage =
-  "Hola, Alex. Encontré AYACX Photography y me gustaría consultar disponibilidad para una sesión.";
+  "Hola, Anthony. Encontré AYACX Photography y me gustaría consultar disponibilidad para una sesión.";
 
 export const contact = {
   email: "nthnyaguana@gmail.com",

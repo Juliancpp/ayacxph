@@ -1,18 +1,16 @@
 import { createFileRoute, notFound } from "@tanstack/react-router";
 import { PortfolioCategoryPage } from "@/components/PortfolioCategoryPage";
 import { getPortfolioCategory } from "@/data/portfolio";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/portafolio/eventos")({
-  head: () => ({
-    meta: [
-      { title: "Eventos — Portafolio | AYACX Photography" },
-      {
-        name: "description",
-        content:
-          "Galería de fotografía de eventos por Alex Yaguana para AYACX Photography en Quito, Ecuador.",
-      },
-    ],
-  }),
+  head: () =>
+    pageHead({
+      title: "Fotografía de eventos en Quito | AYACX Photography",
+      description:
+        "Coberturas de graduaciones, celebraciones, eventos privados y momentos importantes fotografiados en Quito.",
+      path: "/portafolio/eventos",
+    }),
   loader: () => {
     const category = getPortfolioCategory("eventos");
     if (!category) throw notFound();

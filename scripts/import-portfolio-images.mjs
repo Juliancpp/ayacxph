@@ -15,7 +15,7 @@ const categories = [
   {
     slug: "retratos",
     prefix: "retrato",
-    sourceDir: process.env.RETRATOS_SRC ?? "/home/julian/Descargas/Retratos",
+    sourceDir: process.env.RETRATOS_SRC,
     alt: "Retrato fotografiado por AYACX Photography.",
     heroFilename: process.env.RETRATOS_HERO ?? "DSC02546.jpg",
     coverFilename: process.env.RETRATOS_COVER ?? "DSC02546.jpg",
@@ -24,7 +24,7 @@ const categories = [
   {
     slug: "eventos",
     prefix: "evento",
-    sourceDir: process.env.EVENTOS_SRC ?? "/home/julian/Descargas/Eventos",
+    sourceDir: process.env.EVENTOS_SRC,
     alt: "Fotografía de evento realizada por AYACX Photography.",
     heroFilename: process.env.EVENTOS_HERO ?? "DSC02516.jpg",
     coverFilename: process.env.EVENTOS_COVER ?? "DSC02516.jpg",
@@ -33,9 +33,7 @@ const categories = [
   {
     slug: "marcas",
     prefix: "marca",
-    sourceDir:
-      process.env.MARCAS_SRC ??
-      "/home/julian/Descargas/Fotos-20260728T032021Z-1-001/Fotos",
+    sourceDir: process.env.MARCAS_SRC,
     alt: "Fotografía comercial realizada por AYACX Photography.",
     heroFilename: process.env.MARCAS_HERO ?? "Cerveza 2.jpg",
     coverFilename: process.env.MARCAS_COVER ?? "Cerveza 3.jpg",
@@ -122,6 +120,13 @@ async function readExistingManifest() {
 }
 
 async function processCategory(category) {
+  if (!category.sourceDir) {
+    const envName = `${category.slug.toUpperCase().replaceAll("-", "_")}_SRC`;
+    throw new Error(
+      `Missing source directory for ${category.slug}. Set ${envName} before running import:portfolio.`,
+    );
+  }
+
   if (!existsSync(category.sourceDir)) {
     throw new Error(`Source directory not found: ${category.sourceDir}`);
   }
