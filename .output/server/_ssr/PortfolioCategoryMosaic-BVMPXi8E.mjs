@@ -1,0 +1,107 @@
+import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
+import { o as cn } from "./SiteLayout-DnIZqpiL.mjs";
+import { t as PortfolioImage } from "./PortfolioImage-B4ap599g.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/PortfolioCategoryMosaic-BVMPXi8E.js
+var import_jsx_runtime = require_jsx_runtime();
+var accentLine = {
+	sage: "bg-sage",
+	steel: "bg-steel",
+	sand: "bg-sand"
+};
+function PortfolioCategoryMosaic({ categories }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		className: "mx-auto mt-14 aspect-square w-full max-w-[1120px] overflow-hidden border border-ink/10 bg-ink",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "grid h-full grid-cols-2 grid-rows-2",
+			children: categories.map((category) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("a", {
+				href: `/portafolio/${category.slug}`,
+				"aria-label": `Ver galería de ${category.name}`,
+				className: "group relative isolate flex min-h-0 cursor-pointer items-end overflow-hidden border-ink/20 p-3 text-paper outline-offset-[-4px] transition-opacity active:opacity-90 sm:p-6 lg:p-8 [&:nth-child(1)]:border-b [&:nth-child(1)]:border-r [&:nth-child(2)]:border-b [&:nth-child(3)]:border-r",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(CategoryVisual, { category }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "absolute inset-0 -z-10 bg-gradient-to-t from-ink/82 via-ink/34 to-ink/12 transition-colors duration-300 group-hover:from-ink/90" }),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+						className: "relative w-full",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+								"aria-hidden": "true",
+								className: cn("mb-3 block h-1 w-8 transition-all duration-300 group-hover:w-12", accentLine[category.accent])
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+								className: "text-balance font-[family-name:var(--font-display)] text-[clamp(1.2rem,5.1vw,1.55rem)] font-light leading-[1.02] sm:text-[clamp(1.65rem,4vw,3.25rem)]",
+								children: category.name
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+								className: "mt-3 hidden max-w-md text-sm leading-relaxed text-paper/78 md:block",
+								children: category.shortDescription
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+								className: "ui-label mt-2 inline-flex min-h-8 items-center gap-2 text-paper sm:mt-4",
+								children: [
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "hidden sm:inline",
+										children: "Ver galería"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										className: "sm:hidden",
+										children: "Ver"
+									}),
+									/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+										"aria-hidden": "true",
+										className: "transition-transform duration-300 group-hover:translate-x-1",
+										children: "→"
+									})
+								]
+							})
+						]
+					})
+				]
+			}, category.id))
+		})
+	});
+}
+function CategoryVisual({ category }) {
+	const image = category.coverImage;
+	if (image.thumbnailSrc || image.src) return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(PortfolioImage, {
+		image,
+		variant: "thumbnail",
+		sizes: "(min-width: 1280px) 560px, 50vw",
+		loading: category.order === 1 ? "eager" : "lazy",
+		fetchPriority: category.order === 1 ? "high" : "auto",
+		decoding: "async",
+		className: "absolute inset-0 -z-20 h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.035]",
+		style: { objectPosition: image.focalPoint ?? "50% 50%" }
+	});
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		"aria-hidden": "true",
+		className: "absolute inset-0 -z-20 bg-mist text-ink/35",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+			className: "h-full w-full opacity-70",
+			viewBox: "0 0 100 100",
+			preserveAspectRatio: "none",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+				x1: "0",
+				y1: "0",
+				x2: "100",
+				y2: "100",
+				stroke: "currentColor",
+				strokeWidth: "0.25"
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+				x1: "100",
+				y1: "0",
+				x2: "0",
+				y2: "100",
+				stroke: "currentColor",
+				strokeWidth: "0.25"
+			})]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+			className: "absolute inset-0 flex items-center justify-center",
+			children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+				className: "eyebrow hidden bg-paper/65 px-3 py-2 text-ink/45 sm:inline-flex",
+				children: "Fotografía pendiente"
+			})
+		})]
+	});
+}
+//#endregion
+export { PortfolioCategoryMosaic as t };

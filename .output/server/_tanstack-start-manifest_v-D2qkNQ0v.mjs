@@ -1,0 +1,99 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-D2qkNQ0v.js
+var tsrStartManifest = () => ({ routes: {
+	__root__: {
+		filePath: "/home/julian/repos/ayacx_photography/src/routes/__root.tsx",
+		children: [
+			"/",
+			"/contacto",
+			"/servicios",
+			"/sitemap.xml",
+			"/sobre-mi",
+			"/portafolio/contenido-para-redes",
+			"/portafolio/eventos",
+			"/portafolio/marcas",
+			"/portafolio/retratos",
+			"/portafolio/"
+		],
+		preloads: [
+			"/assets/index-2DSkNC9I.js",
+			"/assets/site-CNDpoxmt.js",
+			"/assets/portfolio.generated-eE-Qzw66.js"
+		],
+		scripts: [{ attrs: {
+			type: "module",
+			async: !0,
+			src: "/assets/index-2DSkNC9I.js"
+		} }]
+	},
+	"/": {
+		filePath: "/home/julian/repos/ayacx_photography/src/routes/index.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/routes-DV0EAOwk.js",
+			"/assets/SiteLayout-BG1bCVod.js",
+			"/assets/ImagePlaceholder-CjpNePqa.js",
+			"/assets/PortfolioImage-CLBb4ZHd.js",
+			"/assets/PortfolioCategoryMosaic-BVBb4YvC.js",
+			"/assets/Reveal-C8CfLtzj.js",
+			"/assets/ProcessSection-CEG_Qdga.js",
+			"/assets/FinalCta-BxVDaDFX.js"
+		]
+	},
+	"/contacto": {
+		filePath: "/home/julian/repos/ayacx_photography/src/routes/contacto.tsx",
+		children: void 0,
+		preloads: ["/assets/contacto-CablKZH8.js", "/assets/SiteLayout-BG1bCVod.js"]
+	},
+	"/servicios": {
+		filePath: "/home/julian/repos/ayacx_photography/src/routes/servicios.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/servicios-B1sr3NNt.js",
+			"/assets/SiteLayout-BG1bCVod.js",
+			"/assets/ProcessSection-CEG_Qdga.js"
+		]
+	},
+	"/sobre-mi": {
+		filePath: "/home/julian/repos/ayacx_photography/src/routes/sobre-mi.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/sobre-mi-DkFz1ev7.js",
+			"/assets/SiteLayout-BG1bCVod.js",
+			"/assets/ImagePlaceholder-CjpNePqa.js",
+			"/assets/Reveal-C8CfLtzj.js",
+			"/assets/FinalCta-BxVDaDFX.js"
+		]
+	},
+	"/portafolio/contenido-para-redes": {
+		filePath: "/home/julian/repos/ayacx_photography/src/routes/portafolio.contenido-para-redes.tsx",
+		children: void 0,
+		preloads: ["/assets/portafolio.contenido-para-redes-BNJGrJLP.js", "/assets/PortfolioCategoryPage-_fxAn6QC.js"]
+	},
+	"/portafolio/eventos": {
+		filePath: "/home/julian/repos/ayacx_photography/src/routes/portafolio.eventos.tsx",
+		children: void 0,
+		preloads: ["/assets/portafolio.eventos-Yg2ff9Xd.js", "/assets/PortfolioCategoryPage-_fxAn6QC.js"]
+	},
+	"/portafolio/marcas": {
+		filePath: "/home/julian/repos/ayacx_photography/src/routes/portafolio.marcas.tsx",
+		children: void 0,
+		preloads: ["/assets/portafolio.marcas-DvcOZmKz.js", "/assets/PortfolioCategoryPage-_fxAn6QC.js"]
+	},
+	"/portafolio/retratos": {
+		filePath: "/home/julian/repos/ayacx_photography/src/routes/portafolio.retratos.tsx",
+		children: void 0,
+		preloads: ["/assets/portafolio.retratos-CpszfWdu.js", "/assets/PortfolioCategoryPage-_fxAn6QC.js"]
+	},
+	"/portafolio/": {
+		filePath: "/home/julian/repos/ayacx_photography/src/routes/portafolio.index.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/portafolio.index-9NvEwGKm.js",
+			"/assets/SiteLayout-BG1bCVod.js",
+			"/assets/PortfolioCategoryMosaic-BVBb4YvC.js",
+			"/assets/FinalCta-BxVDaDFX.js"
+		]
+	}
+} });
+//#endregion
+export { tsrStartManifest };

@@ -1,0 +1,93 @@
+import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.mjs";
+import { o as cn } from "./SiteLayout-DnIZqpiL.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/ImagePlaceholder-BlPOlJje.js
+var import_jsx_runtime = require_jsx_runtime();
+var ratioClass = {
+	"4:5": "aspect-[4/5]",
+	"3:2": "aspect-[3/2]",
+	"1:1": "aspect-square",
+	"16:9": "aspect-[16/9]",
+	"5:4": "aspect-[5/4]",
+	"2:3": "aspect-[2/3]"
+};
+var toneClass = {
+	mist: "bg-mist text-ink/55",
+	sage: "bg-[color-mix(in_oklab,var(--sage)_38%,var(--mist))] text-ink/60",
+	steel: "bg-[color-mix(in_oklab,var(--steel)_38%,var(--mist))] text-ink/60",
+	sand: "bg-[color-mix(in_oklab,var(--sand)_38%,var(--mist))] text-ink/60",
+	paper: "bg-paper text-ink/55"
+};
+/**
+* ImagePlaceholder — reserva la proporción de la fotografía real que irá aquí.
+* Sustituir por <img> cuando las fotografías definitivas estén disponibles.
+*/
+function ImagePlaceholder({ label, ratio = "4:5", tone = "mist", className, compact = false }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		role: "img",
+		"aria-label": `Espacio reservado: ${label}. Proporción recomendada ${ratio}.`,
+		className: cn("relative w-full overflow-hidden border border-ink/8", ratioClass[ratio], toneClass[tone], className),
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+				"aria-hidden": "true",
+				className: "absolute inset-0 h-full w-full opacity-45",
+				viewBox: "0 0 100 100",
+				preserveAspectRatio: "none",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+					x1: "0",
+					y1: "0",
+					x2: "100",
+					y2: "100",
+					stroke: "currentColor",
+					strokeWidth: "0.25"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("line", {
+					x1: "100",
+					y1: "0",
+					x2: "0",
+					y2: "100",
+					stroke: "currentColor",
+					strokeWidth: "0.25"
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("svg", {
+				"aria-hidden": "true",
+				className: "absolute left-1/2 top-1/2 w-[34%] max-w-24 -translate-x-1/2 -translate-y-[calc(50%+1.6rem)] opacity-70",
+				viewBox: "0 0 64 44",
+				fill: "none",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("rect", {
+						x: "0.5",
+						y: "0.5",
+						width: "63",
+						height: "43",
+						stroke: "currentColor",
+						strokeWidth: "1"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("circle", {
+						cx: "17",
+						cy: "14",
+						r: "5",
+						stroke: "currentColor",
+						strokeWidth: "1"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+						d: "M2 40 22 22l12 11 10-8 18 15",
+						stroke: "currentColor",
+						strokeWidth: "1"
+					})
+				]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: cn("absolute inset-x-0 bottom-0 flex flex-col gap-1 p-4 text-center sm:p-5", compact && "p-3"),
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+					className: "ui-label leading-snug",
+					children: label
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+					className: "eyebrow opacity-70",
+					children: ["Proporción recomendada: ", ratio]
+				})]
+			})
+		]
+	});
+}
+//#endregion
+export { ImagePlaceholder as t };

@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-07-28T06:57:21.601Z",
+  "tool": "magick",
+  "outputRoot": "public/images/portfolio",
+  "formats": {
+    "jpeg": true,
+    "webp": true,
+    "avif": false
+  },
+  "categories": {
+    "marcas": {
+      "sourceDir": "/home/julian/Descargas/Fotos-20260728T032021Z-1-001/Fotos",
+      "filesFound": 33,
+      "validImages": 33,
+      "processedImages": 33,
+      "omitted": [],
+      "duplicates": [],
+      "hero": {
+        "id": "marca-018",
+        "originalFilename": "Cerveza 2.jpg",
+        "focalPoint": "54% 52%"
+      },
+      "cover": {
+        "id": "marca-019",
+        "originalFilename": "Cerveza 3.jpg"
+      }
+    }
+  }
+}

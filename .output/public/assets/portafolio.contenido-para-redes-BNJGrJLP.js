@@ -1,0 +1,1 @@
+import{g as e}from"./site-CNDpoxmt.js";import{i as t}from"./index-2DSkNC9I.js";import{t as n}from"./PortfolioCategoryPage-_fxAn6QC.js";var r=e();function i(){let{category:e}=t.useLoaderData();return(0,r.jsx)(n,{category:e})}export{i as component};
